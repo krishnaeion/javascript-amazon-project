@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazon Header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            margin: 0;
+            height: 2000px;
+        }
+
+        .flex-box {
+            display: flex;
+            background-color: rgb(19, 25, 33);
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+
+        }
+
+        .left-section {
+            /* background-color: blue; */
+            padding: 4px;
+            width: 100px;
+            margin: 2px;
+        }
+
+        .middle-section {
+            display: flex;
+            flex: 1;
+            max-width: 850px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .right-section {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+
+        .amazon-logo {
+            width: 100px;
+            margin-top: 5px;
+        }
+
+        .amazon-mobile-logo {
+            display: none;
+        }
+
+        @media (max-width: 575px) {
+            .amazon-logo {
+                display: none;
+            }
+
+            .amazon-mobile-logo {
+                display: block;
+                height: 35px;
+                margin-top: 6px;
+            }
+        }
+
+        .header-link {
+            display: inline-block;
+            padding: 6px;
+            border-radius: 2px;
+            text-decoration: none;
+        }
+
+        .header-link:hover {
+            cursor: pointer;
+            border: 1px solid white;
+
+        }
+
+        .search {
+            flex: 1;
+            width: 0;
+            font-size: 16px;
+            height: 38px;
+            padding-left: 15px;
+            border: none;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-top: 7px;
+
+        }
+
+        .search-button {
+            background-color: rgb(254, 189, 105);
+            border: none;
+            width: 45px;
+            height: 40px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 7px;
+        }
+
+        .search-image {
+            height: 22px;
+            margin-left: 2px;
+            margin-top: 3px;
+        }
+
+        .returns-text {
+            margin-top: 20px;
+            padding-top: 20px;
+
+        }
+
+        .orders-text {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .orders-link {
+            color: white;
+        }
+
+        .cart-icon {
+            height: 35px;
+        }
+
+        .cart-text {
+            color: white;
+            margin-top: 12px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .cart-link {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .cart-quantity {
+            color: rgb(240, 136, 4);
+            font-size: 16px;
+            font-weight: 700;
+            position: absolute;
+            top: 4px;
+            left: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div class="left-section">
+            <a href="amazon.html" class="header-link">
+                <img class="amazon-logo" src="images/amazon-logo-white.png">
+                <img class="amazon-mobile-logo" src="images/amazon-mobile-logo-white.png">
+            </a>
+        </div>
+        <div class="middle-section">
+            <input class="search" type="text" id="search" placeholder="Search">
+            <button class="search-button"> <img class="search-image" src="images/icons/search-icon.png"
+                    alt="search"></button>
+        </div>
+        <div class="right-section">
+            <a class="orders-link header-link" href="orders.html">
+                <span class="returns-text">Returns</span>
+                <span class="orders-text">& Orders</span>
+            </a>
+
+            <a class="cart-link header-link" href="checkout.html">
+                <img class="cart-icon" src="images/icons/cart-icon.png">
+                <div class="cart-quantity">3</div>
+                <div class="cart-text">Cart</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
