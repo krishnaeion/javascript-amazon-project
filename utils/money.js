@@ -1,0 +1,3 @@
+export function formatCur(priceCents){
+    return (((priceCents)/100).toFixed(2));
+}
