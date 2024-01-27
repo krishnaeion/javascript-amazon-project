@@ -65,5 +65,5 @@ const paymentSummaryHTML =
 
   console.log(paymentSummaryHTML);
   document.querySelector('.js-payment-summary').innerHTML=paymentSummaryHTML;
-  renderPaymentSummary();
+//   renderPaymentSummary();
 }
